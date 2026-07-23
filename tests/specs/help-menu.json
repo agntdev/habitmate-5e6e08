@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Back to menu from help",
+    "steps": [
+      {
+        "send": { "text": "/help" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "ℹ️ HabitNest helps you build good habits with gentle reminders.\n\n• Tap ➕ New habit to create a habit\n• Tap 📋 My habits to see your progress\n• Tap 📊 Weekly recap to review your week\n• Tap ⚙️ Settings to change your timezone or recap time\n\nEverything is reachable by tapping — no commands needed!" } }
+        ]
+      },
+      {
+        "send": { "callback": "menu:help" },
+        "expect": [
+          { "method": "editMessageText", "payload": { "text": "ℹ️ HabitNest helps you build good habits with gentle reminders.\n\n• Tap ➕ New habit to create a habit\n• Tap 📋 My habits to see your progress\n• Tap 📊 Weekly recap to review your week\n• Tap ⚙️ Settings to change your timezone or recap time\n\nEverything is reachable by tapping — no commands needed!" } }
+        ]
+      }
+    ]
+  }
+]

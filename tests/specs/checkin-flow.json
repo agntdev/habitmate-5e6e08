@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Daily check-in - Done",
+    "steps": [
+      {
+        "send": { "callback": "habit:create" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "What habit would you like to build?\n\nType the name below — something short like \"Meditate\" or \"Read 20 pages\"." } }
+        ]
+      },
+      {
+        "send": { "text": "Read" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Great — \"Read\"! How often?" } }
+        ]
+      },
+      {
+        "send": { "callback": "habit:schedule:daily" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "What time should I remind you?\n\nType it like 7:00 AM or 9:30 PM." } }
+        ]
+      },
+      {
+        "send": { "text": "9:00 PM" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Ready to create your habit:\n\n📝 Read\n🔁 daily\n⏰ 21:00\n🌍 UTC" } }
+        ]
+      },
+      {
+        "send": { "callback": "habit:confirm" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Your habit is set up! You'll get gentle reminders at the scheduled time. Tap ✅ when you complete it, ⏭️ to skip, or 😴 to snooze." } }
+        ]
+      }
+    ]
+  }
+]
