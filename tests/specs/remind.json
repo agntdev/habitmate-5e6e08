@@ -1,0 +1,20 @@
+[
+  {
+    "name": "/remind",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Manually trigger reminder for current day"
+            }
+          }
+        ],
+        "send": {
+          "text": "/remind"
+        }
+      }
+    ]
+  }
+]
