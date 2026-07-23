@@ -1,0 +1,43 @@
+[
+  {
+    "name": "/remind shows pending habits",
+    "steps": [
+      {
+        "send": { "callback": "habit:create" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "What habit would you like to build?\n\nType the name below — something short like \"Meditate\" or \"Read 20 pages\"." } }
+        ]
+      },
+      {
+        "send": { "text": "Stretch" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Great — \"Stretch\"! How often?" } }
+        ]
+      },
+      {
+        "send": { "callback": "habit:schedule:daily" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "What time should I remind you?\n\nType it like 7:00 AM or 9:30 PM." } }
+        ]
+      },
+      {
+        "send": { "text": "6:00 AM" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Ready to create your habit:\n\n📝 Stretch\n🔁 daily\n⏰ 06:00\n🌍 UTC" } }
+        ]
+      },
+      {
+        "send": { "callback": "habit:confirm" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Your habit is set up! You'll get gentle reminders at the scheduled time. Tap ✅ when you complete it, ⏭️ to skip, or 😴 to snooze." } }
+        ]
+      },
+      {
+        "send": { "text": "/remind" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Time for \"Stretch\"!" } }
+        ]
+      }
+    ]
+  }
+]

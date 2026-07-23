@@ -8,7 +8,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "ℹ️ Tap /start to open the menu, then pick what you want from the buttons.\n\nEverything in this bot is reachable by tapping — you don't need to remember any commands."
+              "text": "ℹ️ HabitNest helps you build good habits with gentle reminders.\n\n• Tap ➕ New habit to create a habit\n• Tap 📋 My habits to see your progress\n• Tap 📊 Weekly recap to review your week\n• Tap ⚙️ Settings to change your timezone or recap time\n\nEverything is reachable by tapping — no commands needed!"
             }
           }
         ]

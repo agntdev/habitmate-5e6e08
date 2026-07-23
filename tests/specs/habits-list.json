@@ -5,9 +5,9 @@
       {
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "View all active habits with metrics"
+              "text": "You haven't created any habits yet.\n\nTap ➕ New habit to start building one."
             }
           }
         ],

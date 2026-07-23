@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Start habit creation wizard"
+              "text": "What habit would you like to build?\n\nType the name below — something short like \"Meditate\" or \"Read 20 pages\"."
             }
           }
         ],

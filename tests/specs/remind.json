@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Manually trigger reminder for current day"
+              "text": "You don't have any habits set up yet.\n\nTap /start to create your first habit."
             }
           }
         ],
